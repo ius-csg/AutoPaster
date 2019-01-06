@@ -4,7 +4,7 @@ Paste text into VM's easily.
 
 ## Download
 
-Go to [releases](releases) and download the latest release.
+Go to [releases](https://github.com/ius-csg/AutoPaster) and download the latest release.
 
 ## Usage
 
