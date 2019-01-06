@@ -28,7 +28,7 @@ namespace AutoPaster
                     string character = text.Substring(0, 1);
                     SendKeys.SendWait(isSpecialChar(character) ? "{" + character + "}" : character);                    
                     text = text.Substring(1);
-                    Thread.Sleep(100);
+                    Thread.Sleep(20);
                 }
             }, null, TimeSpan.FromMilliseconds(3000), Timeout.InfiniteTimeSpan);
         }
