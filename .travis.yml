@@ -2,4 +2,11 @@ os: windows
 language: csharp
 solution: AutoPaster.sln
 script:
-  - msbuild /p:Configuration=Release AutoPaster.sln
+- msbuild /p:Configuration=Release AutoPaster.sln
+deploy:
+  provider: releases
+  api_key:
+    secure: kbQT4pSpLUQuo3TEWB73S1H95mdci/TqFx0ZxAuaWkOvvlkQL/PyBDG1cmOztuGQVPF6K0usiJbYQldIeMWYXi/4UziqyCkpqOr8PDkx760V33/rylWtNj31zw7qtFmZaQpY4xD0sv7A4yk3SQdOU1E/Ti/YUzaxr/mrMFNmhS+JxVv1UoafPdIzl83CmWn/3ocddD/1oUEIUn6j88lcTmJS3Oy2IEKERqcZk0E66EGLlTPniyKOgWLQaorY9+ZAe6kPK1ujUT+TOifwICaBzklMyfz37dMs3uyHGFq1EzqJmKaUVa6gx8ca2CZigZRYvuiVf7yQxfjw0XxemgWpGwTAqamFhIG7/+B1n8woKhoBwwGyXPNDBttjviknkCbBrtgIOsdmfpIOXGRNZ+dtDqLe8CBEI0X4edpYNuTFYl0bnJnh0Ii1P6HpTtsU21dbQZhf00QUgjusQ9S9gpU971vu6K/pGSJ+S6fTJOsPmmbJ1TaFftt5t+Q9HR77pUwQzifPKdP0kaqVrVEkBV15pqIde9Ht+GDgmBzlCm2nW+nb7qO1mtyueN/Hh83MzcjrGJaxpFwLBGl0x3akYllYuPgaUKrmQtAt/NMOvRvCNoE3R4Sb8N6flmIwV6zM99TxJgbsNLYh/Jcqrj0tORQ1PwmrO3y7lYkqUmh3t8H24GU=
+  file: AutoPaster\bin\Release\AutoPaster.exe
+  on:
+    tags: true
